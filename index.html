@@ -1,1 +1,318 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physique Facile | Apprendre autrement</title>
+
+<style>
+:root {
+  --primary: #243B63;
+  --secondary: #4A90C2;
+  --background: #EAF2F8;
+  --white: #FFFFFF;
+  --green: #35A77C;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: #26364B;
+  line-height: 1.6;
+}
+
+/* NAVIGATION */
+header {
+  background: var(--primary);
+  color: white;
+  padding: 18px 7%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+}
+
+/* ACCUEIL */
+.hero {
+  background: linear-gradient(135deg, #243B63, #4A90C2);
+  color: white;
+  text-align: center;
+  padding: 85px 20px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* CONTENU */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 45px 20px;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #243B6315;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.emoji {
+  font-size: 42px;
+}
+
+.card h3 {
+  color: var(--primary);
+  margin: 12px 0;
+}
+
+/* QUIZ */
+.quiz {
+  background: white;
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.quiz h2 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.option {
+  display: block;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+#resultat {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* ASSISTANT */
+.assistant {
+  margin-top: 40px;
+  background: #DCEAF5;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media(max-width: 650px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<header>
+<nav>
+  <div class="logo">⚛ Physique Facile</div>
+  <div>
+    <a href="#cours">Cours</a>
+    <a href="#experiences">Expériences</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#assistant">Assistant IA</a>
+  </div>
+</nav>
+</header>
+
+<!-- ACCUEIL -->
+<section class="hero">
+  <h1>Bienvenue dans ton laboratoire de physique !</h1>
+  <p>Découvre, comprends et expérimente la physique en français.</p>
+  <a href="#cours" class="btn">Commencer à apprendre</a>
+</section>
+
+<!-- RUBRIQUES -->
+<main class="container">
+
+<h2 class="section-title">Explore nos quatre espaces</h2>
+
+<div class="grid">
+
+  <article class="card" id="cours">
+    <div class="emoji">📚</div>
+    <h3>Mes cours</h3>
+    <p>Apprends les notions fondamentales de physique avec des explications simples et des illustrations.</p>
+    <br>
+    <a href="#quiz" class="btn">Découvrir</a>
+  </article>
+
+  <article class="card" id="experiences">
+    <div class="emoji">🔬</div>
+    <h3>Expériences</h3>
+    <p>Découvre les phénomènes physiques grâce à des expériences scientifiques.</p>
+    <br>
+    <a href="#quiz" class="btn">Explorer</a>
+  </article>
+
+  <article class="card" id="exercices">
+    <div class="emoji">✏️</div>
+    <h3>Exercices et quiz</h3>
+    <p>Entraîne-toi avec des questions interactives et améliore tes connaissances.</p>
+    <br>
+    <a href="#quiz" class="btn">S'entraîner</a>
+  </article>
+
+  <article class="card" id="assistant">
+    <div class="emoji">🤖</div>
+    <h3>Mon assistant IA</h3>
+    <p>Un assistant pédagogique pour répondre à tes questions et t'aider à comprendre la physique.</p>
+    <br>
+    <p><strong>Bientôt disponible !</strong></p>
+  </article>
+
+</div>
+
+<!-- QUIZ -->
+<section class="quiz" id="quiz">
+
+<h2>🎯 Teste tes connaissances !</h2>
+
+<p><strong>Question :</strong> Quelle est la source naturelle principale de lumière sur Terre ?</p>
+
+<label class="option">
+<input type="radio" name="reponse" value="a">
+Le Soleil
+</label>
+
+<label class="option">
+<input type="radio" name="reponse" value="b">
+La Lune
+</label>
+
+<label class="option">
+<input type="radio" name="reponse" value="c">
+La Terre
+</label>
+
+<button class="btn" onclick="verifier()">Vérifier ma réponse</button>
+
+<p id="resultat"></p>
+
+</section>
+
+<!-- ASSISTANT IA -->
+<section class="assistant">
+<h2>🤖 Besoin d'aide ?</h2>
+<p>Tu as une question sur la physique ? Ton assistant pédagogique arrivera bientôt !</p>
+</section>
+
+</main>
+
+<!-- PIED DE PAGE -->
+<footer>
+<p>⚛ Physique Facile</p>
+<p>Apprendre la physique autrement | Collège A1 et A2</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function verifier() {
+
+  const choix = document.querySelector(
+    'input[name="reponse"]:checked'
+  );
+
+  const resultat = document.getElementById("resultat");
+
+  if (!choix) {
+    resultat.textContent = "Choisis une réponse avant de vérifier !";
+    resultat.style.color = "orange";
+    return;
+  }
+
+  if (choix.value === "a") {
+    resultat.textContent = "🎉 Bravo ! Le Soleil est la principale source naturelle de lumière sur Terre.";
+    resultat.style.color = "green";
+  } else {
+    resultat.textContent = "❌ Essaie encore ! Pense à l'astre qui éclaire naturellement la Terre.";
+    resultat.style.color = "red";
+  }
+}
+</script>
+
+</body>
+</html>
+
